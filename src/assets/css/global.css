@@ -1,0 +1,11 @@
+html,
+body,
+#app {
+    min-width: 1300px;
+}
+
+.head {
+    font-size: 39px;
+    padding-top: 100px;
+    padding-left: 10px;
+}
