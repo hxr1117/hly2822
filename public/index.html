@@ -5,15 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.isProd ? '' : 'dev-- ' %>珠海和林园园林绿化工程有限公司</title>
+    <title><%= NODE_ENV ==='development' ? 'dev-' : '' %>珠海和林园园林绿化工程有限公司</title>
 
 
-    <% if(htmlWebpackPlugin.options.isProd){ %>
+    <% if(NODE_ENV === 'production'){ %>
     <link rel="stylesheet" href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css" integrity="sha384-jbCTJB16Q17718YM9U22iJkhuGbS0Gd2LjaWb4YJEZToOPmnKDjySVa323U+W7Fv" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.staticfile.org/normalize/8.0.1/normalize.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <script src="https://unpkg.com/vue-lazyload/vue-lazyload.js"></script>
     <script src="https://unpkg.com/vue-baidu-map"></script>
+    <script>
+      Vue.use(VueLazyload)
+      // Vue.use(BaiduMap)
+    </script>
     <% } %>
     <!-- <title><%= htmlWebpackPlugin.options.title %></title> -->
 

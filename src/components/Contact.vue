@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import { BaiduMap } from 'vue-baidu-map'
-import { BmMarker } from 'vue-baidu-map/components/overlays/Marker.vue'
+import BaiduMap from 'vue-baidu-map/components/map/Map.vue'
+import { BmMarker } from 'vue-baidu-map'
 export default {
   components: {
     BaiduMap,

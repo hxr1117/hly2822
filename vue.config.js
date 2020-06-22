@@ -1,6 +1,19 @@
+const CompressionPlugin = require("compression-webpack-plugin");
 module.exports = {
-  configureWebpack: {
-    plugins: []
+  publicPath: './',
+  // assetsPublicPath: './',
+  configureWebpack: () => {
+    if (process.env.NODE_ENV === 'production') {
+      return {
+        plugins: [
+          new CompressionPlugin({
+            test: /\.js$|\.html$|\.css$|\.jpg$|\.jpeg$|\.png/, // 需要压缩的文件类型
+            threshold: 10240, // 归档需要进行压缩的文件大小最小值，我这个是10K以上的进行压缩
+            deleteOriginalAssets: false // 是否删除原文件
+          })
+        ]
+      }
+    }
   },
   chainWebpack: config => {
     // 发布模式
@@ -13,7 +26,7 @@ module.exports = {
         vue: 'Vue',
         'vue-router': 'VueRouter',
         'vue-lazyload': 'VueLazyload',
-        'vue-baidu-map': 'BaiduMap'
+        'BMap': 'BMap'
       })
       // 图片压缩
       config.module
@@ -25,10 +38,6 @@ module.exports = {
         .end()
       // 图片压缩结束
     })
-    config.plugin('html').tap(args => {
-      args[0].isProd = true
-      return args
-    })
 
     // 开发模式
     config.when(process.env.NODE_ENV === 'development', config => {
@@ -36,10 +45,6 @@ module.exports = {
         .entry('app')
         .clear()
         .add('./src/main-dev.js')
-    })
-    config.plugin('html').tap(args => {
-      args[0].isProd = false
-      return args
     })
   }
 }

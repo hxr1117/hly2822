@@ -32,9 +32,7 @@ export default {
   data() {
     return {
       firstImg: require('../assets/img/1.jpg'),
-      // firstImg: 'https://s1.ax1x.com/2020/06/16/Nirrmd.jpg',
       secondImg: require('../assets/img/2.jpg'),
-      // secondImg: 'https://s1.ax1x.com/2020/06/16/NirBOH.jpg',
       ScreenImg: {
         height: '',
         overflow: 'hidden'
@@ -45,7 +43,7 @@ export default {
   mounted() {
     this.bodyH =
       document.documentElement.clientHeight || document.body.clientHeight
-    console.log(this.$refs.comName)
+    // console.log(this.$refs.comName)
     if (
       this.bodyH <
       this.$refs.comName.getBoundingClientRect().top +
@@ -57,7 +55,7 @@ export default {
         20
     }
     this.ScreenImg.height = this.bodyH + 'px'
-    console.log(this.bodyH)
+    // console.log(this.bodyH)
     window.onresize = () => {
       this.bodyH =
         document.documentElement.clientHeight || document.body.clientHeight
