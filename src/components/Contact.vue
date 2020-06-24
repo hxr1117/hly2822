@@ -41,7 +41,7 @@ export default {
         lng: 113.587327,
         lat: 22.258764
       },
-      zoom: 19
+      zoom: 18
     }
   }
 }

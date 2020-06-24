@@ -29,7 +29,7 @@ export default {
         },
         {
           title: '珠海航空有限公司',
-          path: 'https://s1.ax1x.com/2020/06/16/Nir06e.jpg'
+          path: require('../assets/img/logo/zhuhai-airport.jpg')
         },
         {
           title: '珠海移动(含各分公司及营业厅)',
@@ -41,7 +41,7 @@ export default {
         },
         {
           title: '珠海乐通化工股份有限公司',
-          path: 'https://www.zh-hr.com/showlogo/DEB73FB183A0F6B641DDE3929B321C1A'
+          path: require('../assets/img/logo/zhlt.png')
         },
         {
           title: '新竹苑迎宾馆(澳门)',

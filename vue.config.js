@@ -26,7 +26,7 @@ module.exports = {
         vue: 'Vue',
         'vue-router': 'VueRouter',
         'vue-lazyload': 'VueLazyload',
-        'BMap': 'BMap'
+        'BaiduMap': 'BMap'
       })
       // 图片压缩
       config.module

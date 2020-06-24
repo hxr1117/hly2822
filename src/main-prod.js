@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 // import VueLazyload from 'vue-lazyload'
 // import 'normalize.css'
-// import './assets/icofont/icofont.min.css'
+import './assets/icofont/icofont.min.css'
 import './assets/css/global.css'
 
 Vue.config.productionTip = false

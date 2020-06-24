@@ -1,6 +1,7 @@
 html,
 body,
 #app {
+    font-family: Source Han Sans CN;
     min-width: 1300px;
 }
 
